@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/style.css">
+<title>Product List</title>
+</head>
+<body>
+<!-- Header Section -->
+<header>
+<!-- Main heading for the page -->
+<h1>Product List</h1>
+<!-- Button to navigate to the Add Product page -->
+<a href="/products/add" class="add-product-btn">Add Product</a>
+</header>
+<!-- Main Content Section -->
+<main>
+<!-- Container for displaying product cards -->
+<div class="product-container">
+<!-- Iterate over each product in the products array -->
+<% products.forEach(product => { %>
+<div class="product-card">
+<!-- Display product image -->
+<img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+<!-- Display product name -->
+<h2><%= product.name %></h2>
+<!-- Display product price -->
+<div class="price">$<%= product.price %></div>
+<!-- Display product category -->
+<div class="category"><%= product.category %></div>
+<!-- Display product description -->
+<p><%= product.description %></p>
+<!-- Actions for each product -->
+<div class="product-actions">
+<!-- Link to navigate to the Edit Product page for the current product -->
+<a href="/products/edit/<%= product._id %>" class="btn btn-edit">Edit</a>
+<!-- Form to handle product deletion -->
+<form action="/products/delete/<%= product._id %>" method="post" style="display:inline;">
+<!-- Button to submit the form and delete the product -->
+<button type="submit" class="btn btn-delete">Delete</button>
+</form>
+</div>
+</div>
+<% }) %>
+</div>
+</main>
+</body>
+</html>
