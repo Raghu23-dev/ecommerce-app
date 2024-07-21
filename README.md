@@ -86,16 +86,13 @@ Edit Product: Click on a product from the list to edit its details. Update the i
 Delete Product: Use the delete button next to each product to remove it from the inventory.
 
 Sample Screenshots
-Home Page
+
 ![Home Page](screenshots/products.jpeg)
 
-Login Page
 ![Login Page](screenshots/login.jpeg)
 
-Add Product Page
-![Add Products Page](screenshots/addProducts.jpeg)
+![Add Products Page](screenshots/addProducts.jpg)
 
-Edit Product Page
 ![Edit Product Page](screenshots/editProducts.jpeg)
 
 Dependencies
