@@ -1,187 +1,163 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif; /* Font for the entire page */
-    margin: 0px; /* Remove default margin */
+    font-family: Arial, sans-serif;
+    margin: 0px;
 }
 
-/* Header Styles */
 header {
-    width: 100%; /* Full width header */
-    height: 5rem; /* Fixed height */
-    border-bottom: 2px solid #efea84; /* Border at the bottom */
-    background-color: #1a1b1b; /* Dark background color */
-    margin: 0% 0% 3% 0%; /* Margin at the bottom */
-    align-items: center; /* Center items vertically */
+    width: 100%;
+    height: 5rem;
+    border-bottom: 2px solid #efea84;
+    background-color: #1a1b1b;
+    margin: 0% 0% 3% 0%;
+    align-items: center;
 }
 
-/* Main Heading */
 h1 {
-    font-size: 24px; /* Font size for main heading */
-    color: #f9f9f9; /* Light color for text */
-    margin: 25px 0px 0px 15px; /* Margin around heading */
-    float: inline-start; /* Float to start */
+    font-size: 24px;
+    color: #f9f9f9;
+    margin: 25px 0px 0px 15px;
+    float: inline-start;
 }
 
-/* Home/Product Button */
 .home-product-btn {
-    float: inline-end; /* Float to end */
-    margin: 13px; /* Margin around button */
-    margin-right: 25px; /* Additional margin on the right */
+    float: inline-end;
+    margin: 13px;
+    margin-right: 25px;
 }
 
-/* Add Product Button */
 .add-product-btn {
-    display: inline-block; /* Inline block for button styling */
-    padding: 10px 15px; /* Padding inside the button */
-    background-color: #007BFF; /* Blue background */
-    color: white; /* White text */
-    text-decoration: none; /* Remove underline from links */
-    border-radius: 5px; /* Rounded corners */
-    margin: 20px; /* Margin around button */
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px;
+    float: inline-end;
 }
 
-/* Hover effect for Add Product Button */
 .add-product-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
-/* Product Container */
 .product-container {
-    display: flex; /* Flexbox for layout */
-    flex-wrap: wrap; /* Wrap items to new line */
-    gap: 20px; /* Gap between items */
-    justify-content: center; /* Center items */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Product Card */
 .product-card {
-    background-color: #f9f9f9; /* Light background */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 15px; /* Padding inside card */
-    width: 280px; /* Fixed width */
-    height: auto; /* Auto height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    box-sizing: border-box; /* Include padding and border in width */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Column layout */
-    align-items: center; /* Center items */
-    text-align: center; /* Center text */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 280px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-/* Product Image */
 .product-card img {
-    width: 100%; /* Full width image */
-    height: 200px; /* Fixed height for image */
-    object-fit: cover; /* Cover the container */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 10px; /* Space below image */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-/* Product Name */
 .product-card h2 {
-    font-size: 18px; /* Font size for product name */
-    margin: 10px 0; /* Margin around heading */
+    font-size: 18px;
+    margin: 10px 0;
 }
 
-/* Product Price */
 .product-card .price {
-    font-size: 16px; /* Font size for price */
-    color: #333; /* Dark color */
-    margin-bottom: 10px; /* Space below price */
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-/* Product Category */
 .product-card .category {
-    font-size: 14px; /* Font size for category */
-    color: #777; /* Gray color */
-    margin-bottom: 10px; /* Space below category */
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
 }
 
-/* Product Description */
 .product-card p {
-    margin: 10px 0; /* Margin around description */
-    flex-grow: 1; /* Allow description to grow */
+    margin: 10px 0;
+    flex-grow: 1;
 }
 
-/* Product Actions */
 .product-actions {
-    display: flex; /* Flexbox for button alignment */
-    justify-content: center; /* Center buttons */
-    gap: 10px; /* Space between buttons */
-    margin-top: auto; /* Push to the bottom */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
 }
 
-/* General Button Styles */
 .btn {
-    display: inline-block; /* Inline block for button styling */
-    padding: 8px 12px; /* Padding inside buttons */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline from links */
-    color: white; /* White text */
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
 }
 
-/* Edit Button */
 .btn-edit {
-    background-color: #28a745; /* Green background */
+    background-color: #28a745;
 }
 
-/* Hover effect for Edit Button */
 .btn-edit:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
 }
 
-/* Delete Button */
 .btn-delete {
-    background-color: #dc3545; /* Red background */
+    background-color: #dc3545;
 }
 
-/* Hover effect for Delete Button */
 .btn-delete:hover {
-    background-color: #c82333; /* Darker red on hover */
+    background-color: #c82333;
 }
 
-/* Form Container */
 .form-container {
-    max-width: 320px; /* Maximum width for the form */
-    margin: auto; /* Center the form */
-    padding: 20px; /* Padding inside form */
-    background-color: #f9f9f9; /* Light background */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    max-width: 320px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Group */
 .form-group {
-    margin-bottom: 15px; /* Space below form groups */
+    margin-bottom: 15px;
 }
 
-/* Form Group Label */
 .form-group label {
-    display: block; /* Block-level labels */
-    margin-bottom: 5px; /* Space below label */
+    display: block;
+    margin-bottom: 5px;
 }
 
-/* Form Input and Select */
 .form-group input, .form-group select {
-    width: 100%; /* Full width */
-    padding: 8px; /* Padding inside input/select */
-    box-sizing: border-box; /* Include padding and border in width */
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
-/* Submit Button */
 .submit-btn {
-    width: 100%; /* Full width button */
-    padding: 10px; /* Padding inside button */
-    background-color: #007BFF; /* Blue background */
-    border: none; /* No border */
-    color: white; /* White text */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Hover effect for Submit Button */
 .submit-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }

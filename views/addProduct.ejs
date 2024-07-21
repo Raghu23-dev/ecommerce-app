@@ -13,7 +13,7 @@
     <!-- Header section with a title and a home button -->
     <header>
         <!-- Page title -->
-        <h1 style="display: inline-block;">Products</h1>
+        <h1 style="display: inline-block;"> Add Products</h1>
         <!-- Home button linking to the products page -->
         <a href="/products" class="home-product-btn">
             <!-- Icon for the home button -->
@@ -103,74 +103,5 @@
         </div>
     </main>
     -->
-</body>
-</html>
-<!-- views/add-product.ejs -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Metadata for character encoding and viewport settings -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Page title -->
-    <title>Add Product</title>
-</head>
-<body>
-    <!-- Header section with navigation -->
-    <header>
-        <!-- Main heading for the page -->
-        <h1 style="display: inline-block;">Products</h1>
-
-        <!-- Home button with an icon that navigates back to the products list -->
-        <a href="/products" class="home-product-btn">
-            <img src="https://img.icons8.com/?size=50&id=VjPllgXNCXLU&format=png&color=000000" alt="Home">
-        </a>
-    </header>
-
-    <!-- Title for the form section -->
-    <h1 class="form_title">Add Product</h1>
-
-    <!-- Container for the form -->
-    <div class="form-container">
-        <!-- Form for adding a new product -->
-        <form id="addProductForm" action="/products/add" method="post">
-            <!-- Form group for the product name -->
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <!-- Form group for the product price -->
-            <div class="form-group">
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" required>
-            </div>
-
-            <!-- Form group for the product category -->
-            <div class="form-group">
-                <label for="category">Category:</label>
-                <input type="text" id="category" name="category" required>
-            </div>
-
-            <!-- Form group for the image URL -->
-            <div class="form-group">
-                <label for="imageUrl">Image URL:</label>
-                <input type="text" id="imageUrl" name="imageUrl" placeholder="Paste image URL here" required>
-            </div>
-
-            <!-- Form group for the product description -->
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <input type="text" id="description" name="description" required>
-            </div>
-
-            <!-- Submit button for the form -->
-            <button type="submit" class="submit-btn">Add Product</button>
-        </form>
-    </div>
 </body>
 </html>
