@@ -1,0 +1,314 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Font for the entire page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Gradient background */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Header Styles */
+header {
+    width: 100%; /* Full width header */
+    height: 5rem; /* Fixed height */
+    border-bottom: 2px solid #efea84; /* Border at the bottom */
+    background-color: #1a1b1b; /* Dark background color */
+    position: fixed; /* Fixed position at the top */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items */
+    padding: 0 20px; /* Horizontal padding */
+    box-sizing: border-box; /* Include padding and border in width */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.home-btn {
+    display: inline-block; /* Inline block for alignment */
+}
+
+.home-btn img {
+    width: 48px; /* Fixed width for home button image */
+    height: 48px; /* Fixed height for home button image */
+}
+
+h1 {
+    font-size: 24px; /* Font size for main heading */
+    color: #f9f9f9; /* Light color for text */
+    margin: 0; /* Remove default margin */
+}
+
+.add-product-btn {
+    display: inline-block; /* Inline block for button styling */
+    padding: 10px 15px; /* Padding inside the button */
+    background-color: #3a7bd5; /* Blue background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 4px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    font-size: 0.8em; /* Slightly smaller font size */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.add-product-btn:hover {
+    background-color: #2a5cb1; /* Darker blue on hover */
+}
+
+/* Product Container */
+.product-container {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Wrap items to new line */
+    gap: 20px; /* Gap between items */
+    justify-content: center; /* Center items */
+    padding: 20px; /* Padding around container */
+    margin-top: 5rem; /* Space for fixed header */
+}
+
+/* Product Card */
+.product-card {
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside card */
+    width: 280px; /* Fixed width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.product-card img {
+    width: 100%; /* Full width image */
+    height: 200px; /* Fixed height for image */
+    object-fit: cover; /* Cover the container */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below image */
+}
+
+.product-card h2 {
+    font-size: 18px; /* Font size for product name */
+    margin: 10px 0; /* Margin around heading */
+}
+
+.product-card .price {
+    font-size: 16px; /* Font size for price */
+    color: #333; /* Dark color */
+    margin-bottom: 10px; /* Space below price */
+}
+
+.product-card .category {
+    font-size: 14px; /* Font size for category */
+    color: #777; /* Gray color */
+    margin-bottom: 10px; /* Space below category */
+}
+
+.product-card p {
+    margin: 10px 0; /* Margin around description */
+    flex-grow: 1; /* Allow description to grow */
+}
+
+.product-actions {
+    display: flex; /* Flexbox for button alignment */
+    justify-content: center; /* Center buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: auto; /* Push to the bottom */
+}
+
+.btn {
+    display: inline-block; /* Inline block for button styling */
+    padding: 8px 12px; /* Padding inside buttons */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text */
+}
+
+.btn-edit {
+    background-color: #28a745; /* Green background */
+}
+
+.btn-edit:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Red background */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Form Styles */
+.form-container {
+    background-color: white; /* White background */
+    width: 100%; /* Full width */
+    max-width: 500px; /* Maximum width */
+    padding: 20px; /* Padding inside form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center; /* Center text */
+    margin: 20px auto; /* Centered with margin */
+}
+
+h2 {
+    margin-bottom: 16px; /* Space below heading */
+    color: #333; /* Dark text color */
+    font-size: 1.2em; /* Slightly larger font size */
+    font-weight: 700; /* Bold text */
+}
+
+.form-group {
+    margin-bottom: 12px; /* Space below form groups */
+}
+
+.form-group label {
+    display: block; /* Block-level labels */
+    font-size: 0.9em; /* Font size for labels */
+    margin-bottom: 6px; /* Space below label */
+    color: #555; /* Gray text color */
+    font-weight: 500; /* Medium weight text */
+    text-align: left; /* Left-align text */
+}
+
+.form-group input, .form-group textarea {
+    width: calc(100% - 12px); /* Full width with padding */
+    padding: 8px; /* Padding inside input/textarea */
+    font-size: 0.9em; /* Font size */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Dark text color */
+    margin-bottom: 8px; /* Space below input/textarea */
+    box-shadow: none; /* No shadow by default */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: transparent; /* Hide border on focus */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Subtle focus shadow */
+}
+
+.submit-btn {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #3a7bd5; /* Blue background */
+    color: white; /* White text */
+    font-weight: bold; /* Bold text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 0.9em; /* Font size */
+    margin-top: 10px; /* Space above button */
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: box-shadow 0.3s, background-color 0.3s; /* Smooth transitions */
+}
+
+.submit-btn:hover {
+    background-color: #2a5cb1; /* Darker blue on hover */
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Adjustments for Login/Signup Forms */
+.form-container {
+    max-width: 320px; /* Reduced maximum width for login/signup forms */
+    margin: auto; /* Centered form */
+    padding: 20px; /* Padding inside form */
+    background-color: white; /* White background */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center; /* Center text */
+}
+
+h2 {
+    margin-bottom: 12px; /* Space below heading */
+    color: #333; /* Dark text color */
+    font-size: 1em; /* Font size */
+    font-weight: 700; /* Bold text */
+}
+
+.form-group {
+    margin-bottom: 8px; /* Space below form groups */
+}
+
+.form-group label {
+    display: block; /* Block-level labels */
+    font-size: 0.8em; /* Font size for labels */
+    margin-bottom: 6px; /* Space below label */
+    color: #555; /* Gray text color */
+    font-weight: 500; /* Medium weight text */
+    text-align: left; /* Left-align text */
+}
+
+.form-group input {
+    width: calc(100% - 10px); /* Full width with padding */
+    padding: 6px; /* Padding inside input */
+    font-size: 0.8em; /* Font size */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Dark text color */
+    margin-bottom: 4px; /* Space below input */
+    box-shadow: none; /* No shadow by default */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.form-group input:focus {
+    border-color: transparent; /* Hide border on focus */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Subtle focus shadow */
+}
+
+.form-group input:hover {
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+}
+
+.error {
+    color: red; /* Red text for error messages */
+    font-size: 0.7em; /* Smaller font size */
+    margin-top: 2px; /* Space above error message */
+}
+
+.password-requirements {
+    margin-top: 6px; /* Space above requirements */
+    font-size: 0.7em; /* Smaller font size */
+    color: #555; /* Gray text color */
+    max-height: 0; /* Hidden by default */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 2s ease-out; /* Smooth reveal transition */
+}
+
+.password-requirements ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.password-requirements li {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 2px; /* Space between items */
+}
+
+.password-requirements li .indicator {
+    margin-right: 6px; /* Space between indicator and text */
+    font-size: 1em; /* Font size for indicator */
+    color: red; /* Red color for invalid indicator */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.password-requirements li.valid .indicator {
+    color: green; /* Green color for valid indicator */
+}
+
+.password-requirements.active {
+    max-height: 150px; /* Show requirements when active */
+}
