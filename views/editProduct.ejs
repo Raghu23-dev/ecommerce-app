@@ -1,0 +1,82 @@
+<!-- views/edit-product.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Page title -->
+    <title>Edit Product</title>
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <!-- Main heading for the page -->
+        <h1 style="display: inline-block;">Edit Products</h1>
+
+        <!-- Home button with an icon that navigates back to the products list -->
+        <a href="/products" class="home-product-btn">
+            <img src="https://img.icons8.com/?size=50&id=VjPllgXNCXLU&format=png&color=000000" alt="Home">
+        </a>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <!-- Container for the form -->
+        <div class="form-container">
+            <!-- Subtitle for the form -->
+            <h2>Edit Product</h2>
+
+            <!-- Form for editing an existing product -->
+            <form action="/products/edit/<%= product._id %>" method="post">
+                <!-- Form group for the product name -->
+                <div class="form-group">
+                    <label for="name">Product Name:</label>
+                    <input type="text" id="name" name="name" value="<%= product.name %>" required>
+                </div>
+
+                <!-- Form group for the product price -->
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" step="0.01" value="<%= product.price %>" required>
+                </div>
+
+                <!-- Form group for the product category -->
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" name="category" value="<%= product.category %>" required>
+                </div>
+
+                <!-- Form group for the product description -->
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required><%= product.description %></textarea>
+                </div>
+
+                <!-- Form group for the image URL -->
+                <div class="form-group">
+                    <label for="imageUrl">Image URL:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" value="<%= product.imageUrl %>" required>
+                </div>
+
+                <!-- Display the current product image -->
+                <div class="form-group">
+                    <label>Current Image:</label>
+                    <img src="<%= product.imageUrl %>" alt="Product Image" style="width: 100%; height: auto; border-radius: 4px;">
+                </div>
+
+                <!-- Submit button for the form -->
+                <button type="submit" class="submit-btn">Update Product</button>
+
+                <!-- Navigation buttons (optional) -->
+                <a href="/login" class="btn btn-login">Login</a>
+                <a href="/signup" class="btn btn-signup">Signup</a>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

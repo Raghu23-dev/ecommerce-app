@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata for character encoding and viewport settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>Login</title>
+
+  <!-- Internal CSS for styling the login page -->
+  <style>
+    /* Basic styling for the body, including background and font settings */
+    body {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Gradient background */
+      font-family: 'Roboto', sans-serif; /* Font family */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      display: flex; /* Use flexbox for layout */
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      min-height: 100vh; /* Full viewport height */
+    }
+
+    /* Container for the login form */
+    .form-container {
+      background-color: white; /* White background for the form */
+      width: 100%; /* Full width of container */
+      max-width: 280px; /* Maximum width of the form */
+      padding: 12px; /* Padding inside the form */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      text-align: center; /* Center align text */
+    }
+
+    /* Heading styling */
+    h2 {
+      margin-bottom: 12px; /* Space below the heading */
+      color: #333; /* Dark text color */
+      font-size: 1em; /* Font size */
+      font-weight: 700; /* Bold font */
+    }
+
+    /* Styling for form groups */
+    .form-group {
+      margin-bottom: 8px; /* Space below form groups */
+    }
+
+    /* Styling for labels within form groups */
+    .form-group label {
+      display: block; /* Block display for labels */
+      font-size: 0.8em; /* Font size */
+      margin-bottom: 6px; /* Space below labels */
+      color: #555; /* Darker text color */
+      font-weight: 500; /* Medium bold font */
+      text-align: left; /* Align text to the left */
+    }
+
+    /* Styling for input fields within form groups */
+    .form-group input {
+      width: calc(100% - 10px); /* Full width minus padding */
+      padding: 6px; /* Padding inside input fields */
+      font-size: 0.8em; /* Font size */
+      border: 1px solid #ddd; /* Light border */
+      border-radius: 4px; /* Rounded corners */
+      background-color: #f9f9f9; /* Light background color */
+      color: #333; /* Dark text color */
+      margin-bottom: 4px; /* Space below input fields */
+      box-shadow: none; /* Remove default shadow */
+      transition: border-color 0.3s, box-shadow 0.3s; /* Transition effects */
+    }
+
+    /* Styling for input fields when focused */
+    .form-group input:focus {
+      border-color: transparent; /* Remove border color */
+      outline: none; /* Remove default outline */
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Add focus shadow */
+    }
+
+    /* Styling for input fields on hover */
+    .form-group input:hover {
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5); /* Add hover shadow */
+    }
+
+    /* Styling for error messages */
+    .error {
+      color: red; /* Red text color for errors */
+      font-size: 0.7em; /* Smaller font size */
+      margin-top: 2px; /* Space above error messages */
+    }
+
+    /* Styling for submit button */
+    .submit-btn {
+      width: 100%; /* Full width button */
+      padding: 8px; /* Padding inside button */
+      background-color: #3a7bd5; /* Background color */
+      color: white; /* White text color */
+      font-weight: bold; /* Bold font */
+      border: none; /* Remove border */
+      border-radius: 4px; /* Rounded corners */
+      cursor: pointer; /* Pointer cursor */
+      font-size: 0.8em; /* Font size */
+      margin-top: 10px; /* Space above button */
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5); /* Button shadow */
+      transition: box-shadow 0.3s, background-color 0.3s; /* Transition effects */
+    }
+
+    /* Styling for submit button on hover */
+    .submit-btn:hover {
+      background-color: #2a5cb1; /* Darker background color */
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5); /* Hover shadow */
+    }
+
+    /* Styling for links */
+    .link {
+      color: #3a7bd5; /* Link color */
+      text-decoration: none; /* Remove underline */
+      font-weight: 500; /* Medium bold font */
+      font-size: 0.8em; /* Font size */
+    }
+
+    /* Styling for links on hover */
+    .link:hover {
+      text-decoration: underline; /* Add underline on hover */
+    }
+
+    /* Center text alignment */
+    .center-text {
+      text-align: center; /* Center align text */
+      font-size: 0.8em; /* Font size */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container for the login form -->
+  <div class="form-container">
+    <!-- Heading for the login form -->
+    <h2>Login</h2>
+
+    <!-- Login form with POST method -->
+    <form id="loginForm" action="/login" method="post">
+      <!-- Form group for username -->
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <span class="error" id="usernameError"></span> <!-- Error message for username -->
+      </div>
+
+      <!-- Form group for password -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <span class="error" id="passwordError"></span> <!-- Error message for password -->
+      </div>
+
+      <!-- Form group for the submit button -->
+      <div class="form-group full-width">
+        <button type="submit" class="submit-btn">Login</button>
+      </div>
+    </form>
+
+    <!-- Link to sign-up page -->
+    <p class="center-text">Don't have an account? <a class="link" href="/signup">Sign Up</a></p>
+  </div>
+
+  <!-- JavaScript for form validation -->
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      let valid = true;
+
+      // Clear previous error messages
+      document.getElementById('usernameError').textContent = '';
+      document.getElementById('passwordError').textContent = '';
+
+      // Validate username
+      const username = document.getElementById('username').value;
+      if (username.length < 3) {
+        document.getElementById('usernameError').textContent = 'Username must be at least 3 characters long.';
+        valid = false;
+      }
+
+      // Validate password
+      const password = document.getElementById('password').value;
+      if (password.length < 6) {
+        document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long.';
+        valid = false;
+      }
+
+      // Prevent form submission if validation fails
+      if (!valid) {
+        event.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>
